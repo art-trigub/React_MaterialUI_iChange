@@ -1,0 +1,8 @@
+{
+    "/web/js/vueapp.js": "/web/js/vueapp.js",
+    "/web/css/app.css": "/web/css/app.css",
+    "/web/js/commons.js": "/web/js/commons.js",
+    "/modules/account/assets/js/account.js": "/modules/account/assets/js/account.js",
+    "/web/js/currencyCalc.js": "/web/js/currencyCalc.js",
+    "/web/js/vendor.js": "/web/js/vendor.js"
+}

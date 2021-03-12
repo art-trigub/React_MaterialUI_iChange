@@ -1,0 +1,1332 @@
+[02-Jan-2020 10:52:21 UTC] PHP Fatal error:  Class 'yii\helpers\VarDumper' not found in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/User.php on line 0
+[25-Feb-2020 19:59:47 UTC] PHP Notice:  Undefined property: yii\db\Exception::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[25-Feb-2020 19:59:47 UTC] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php:1290
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1290): PDOStatement->execute()
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT `t1`.`me...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/DbMessageSource.php(161): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/DbMessageSource.php(132): yii\i18n\DbMessageSource->loadMessagesFromDb('app', 'en')
+#5 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/MessageSource.php(107): yii\i18n\DbMessageSource->loadMessages('app', 'en')
+#6 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/MessageSource.php(87): yii\i18n\MessageSource->translateMessage('app', 'Oops!', 'en')
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/I18N.php(90): yii\i18n\MessageSource->translate('app', 'Oops!', 'en')
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/BaseYii.php(526): yii\i18n\I18N->translate('app', 'Oops!', Array, 'en')
+#9 /home/nct36me6dkto/public_html/frontend/views/site/error.php(25): yii\BaseYii::t('app', 'Oops!')
+#10 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('error', Array, Object(frontend\controllers\SiteController))
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#16 [internal function]: yii\web\ErrorAction->run()
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#22 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+The SQL being executed was: SELECT `t1`.`message` AS `message`, `t2`.`translation` AS `translation` FROM `language_source` `t1`, `language_translate` `t2` WHERE (`t1`.`id`=`t2`.`id`) AND (`t1`.`category`='app') AND (`t2`.`language`='en') in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Schema.php:664
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'SELECT `t1`.`me...')
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT `t1`.`me...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/DbMessageSource.php(161): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/DbMessageSource.php(132): yii\i18n\DbMessageSource->loadMessagesFromDb('app', 'en')
+#5 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/MessageSource.php(107): yii\i18n\DbMessageSource->loadMessages('app', 'en')
+#6 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/MessageSource.php(87): yii\i18n\MessageSource->translateMessage('app', 'Oops!', 'en')
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/I18N.php(90): yii\i18n\MessageSource->translate('app', 'Oops!', 'en')
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/BaseYii.php(526): yii\i18n\I18N->translate('app', 'Oops!', Array, 'en')
+#9 /home/nct36me6dkto/public_html/frontend/views/site/error.php(25): yii\BaseYii::t('app', 'Oops!')
+#10 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('error', Array, Object(frontend\controllers\SiteController))
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#16 [internal function]: yii\web\ErrorAction->run()
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#22 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#23 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+Previous exception:
+PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php:1290
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1290): PDOStatement->execute()
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SHOW FULL COLUM...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#5 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('service')
+#6 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('service', 'schema', false)
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(390): yii\db\Schema->getTableSchema('service')
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(216): yii\db\ActiveRecord::getTableSchema()
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(190): yii\db\ActiveRecord::filterCondition(Array)
+#10 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(121): yii\db\ActiveRecord::findByCondition(Array)
+#11 /home/nct36me6dkto/public_html/frontend/widgets/PopularServices.php(13): yii\db\BaseActiveRecord::findAll(Array)
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Widget.php(140): frontend\widgets\PopularServices->run()
+#13 /home/nct36me6dkto/public_html/frontend/views/site/index.php(39): yii\base\Widget::widget()
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#16 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#18 /home/nct36me6dkto/public_html/frontend/controllers/SiteController.php(79): yii\base\Controller->render('index', Array)
+#19 [internal function]: frontend\controllers\SiteController->actionIndex()
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#22 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#23 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#24 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /home/nct36me6dkto/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#26 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+The SQL being executed was: SHOW FULL COLUMNS FROM `service` in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Schema.php:664
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'SHOW FULL COLUM...')
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SHOW FULL COLUM...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#5 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('service')
+#6 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('service', 'schema', false)
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(390): yii\db\Schema->getTableSchema('service')
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(216): yii\db\ActiveRecord::getTableSchema()
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveRecord.php(190): yii\db\ActiveRecord::filterCondition(Array)
+#10 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/BaseActiveRecord.php(121): yii\db\ActiveRecord::findByCondition(Array)
+#11 /home/nct36me6dkto/public_html/frontend/widgets/PopularServices.php(13): yii\db\BaseActiveRecord::findAll(Array)
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Widget.php(140): frontend\widgets\PopularServices->run()
+#13 /home/nct36me6dkto/public_html/frontend/views/site/index.php(39): yii\base\Widget::widget()
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#16 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#18 /home/nct36me6dkto/public_html/frontend/controllers/SiteController.php(79): yii\base\Controller->render('index', Array)
+#19 [internal function]: frontend\controllers\SiteController->actionIndex()
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#22 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#23 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#24 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /home/nct36me6dkto/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#26 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+$_SERVER = [
+    'LSPHP_ENABLE_USER_INI' => 'on',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'PWD' => '/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'HTTP_CONNECTION' => 'close',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => 'advanced-frontend=700808ede369fa4fc117852a335a4f1c; _language=ff100a5bf510cc7f5c00b6a5f8c86190a6d2cd67360820491851c2c4aaa451d8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf-frontend=d9fc1c8f528dfb721167a6f6823c7a426ad2d07dc00f9c3fd1a2a3c27d84698ea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22l09DWBGiyMh9MGYfE2DUcnLQkKk3A9S-%22%3B%7D',
+    'HTTP_HOST' => 'creativeowl.biz',
+    'HTTP_REFERER' => 'http://creativeowl.biz/en',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36',
+    'REDIRECT_REDIRECT_UNIQUE_ID' => 'XlV8XAth5DoDDbX3qOgPqgAAAMY',
+    'REDIRECT_REDIRECT_SCRIPT_URL' => '/en',
+    'REDIRECT_REDIRECT_SCRIPT_URI' => 'http://creativeowl.biz/en',
+    'REDIRECT_REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'XlV8XAth5DoDDbX3qOgPqgAAAMY',
+    'REDIRECT_SCRIPT_URL' => '/en',
+    'REDIRECT_SCRIPT_URI' => 'http://creativeowl.biz/en',
+    'REDIRECT_STATUS' => '200',
+    'UNIQUE_ID' => 'XlV8XAth5DoDDbX3qOgPqgAAAMY',
+    'SCRIPT_URL' => '/en',
+    'SCRIPT_URI' => 'http://creativeowl.biz/en',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'creativeowl.biz',
+    'SERVER_ADDR' => '160.153.133.171',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '104.244.76.13',
+    'DOCUMENT_ROOT' => '/home/nct36me6dkto/public_html',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/nct36me6dkto/public_html',
+    'SERVER_ADMIN' => 'webmaster@creativeowl.biz',
+    'SCRIPT_FILENAME' => '/home/nct36me6dkto/public_html/frontend/web/index.php',
+    'REMOTE_PORT' => '59208',
+    'REDIRECT_URL' => '/frontend/web/en',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/en',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1582660700.8015201091766357421875,
+    'REQUEST_TIME' => 1582660700,
+]
+[22-Mar-2020 16:33:46 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[22-Mar-2020 16:34:06 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[22-Mar-2020 16:34:28 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[22-Mar-2020 16:34:44 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[22-Mar-2020 16:35:26 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[22-Mar-2020 16:35:36 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[22-Mar-2020 16:36:06 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[22-Mar-2020 16:38:58 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[22-Mar-2020 16:40:12 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[22-Mar-2020 16:40:23 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[22-Mar-2020 16:41:13 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[22-Mar-2020 16:41:24 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[22-Mar-2020 16:43:54 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[22-Mar-2020 16:48:33 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[22-Mar-2020 16:49:03 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[23-Mar-2020 06:06:03 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[23-Mar-2020 06:07:51 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[23-Mar-2020 06:27:57 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[23-Mar-2020 06:28:10 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[23-Mar-2020 06:28:14 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[23-Mar-2020 06:28:22 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[23-Mar-2020 06:28:45 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[23-Mar-2020 06:29:04 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[23-Mar-2020 06:29:22 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[23-Mar-2020 06:29:25 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[23-Mar-2020 06:30:00 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[23-Mar-2020 06:33:25 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[23-Mar-2020 06:33:53 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[26-Mar-2020 03:28:34 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[26-Mar-2020 03:28:34 UTC] PHP Warning:  Header may not contain more than a single header, new line detected in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Response.php on line 374
+[27-Mar-2020 03:05:54 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[27-Mar-2020 03:05:54 UTC] PHP Warning:  Header may not contain more than a single header, new line detected in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Response.php on line 374
+[28-Mar-2020 07:13:39 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[28-Mar-2020 07:13:39 UTC] PHP Warning:  Header may not contain more than a single header, new line detected in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Response.php on line 374
+[30-Mar-2020 19:52:18 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[30-Mar-2020 19:52:18 UTC] PHP Warning:  Header may not contain more than a single header, new line detected in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Response.php on line 374
+[31-Mar-2020 07:20:24 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[31-Mar-2020 07:20:24 UTC] PHP Warning:  Header may not contain more than a single header, new line detected in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Response.php on line 374
+[08-Apr-2020 12:45:19 UTC] PHP Notice:  Undefined property: yii\db\Exception::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[08-Apr-2020 12:45:19 UTC] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php:1290
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1290): PDOStatement->execute()
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT * FROM `...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /home/nct36me6dkto/public_html/frontend/components/Controller.php(28): yii\db\ActiveQuery->all()
+#6 [internal function]: frontend\components\Controller->frontend\components\{closure}(Object(yii\base\Event))
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Event.php(312): call_user_func(Object(Closure), Object(yii\base\Event))
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Component.php(636): yii\base\Event::trigger('yii\\web\\View', 'beginPage', Object(yii\base\Event))
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(575): yii\base\Component->trigger('beginPage')
+#10 /home/nct36me6dkto/public_html/frontend/views/layouts/base.php(16): yii\base\View->beginPage()
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/widgets/ContentDecorator.php(79): yii\base\View->renderFile('/home/nct36me6d...', Array)
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Widget.php(109): yii\widgets\ContentDecorator->run()
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(521): yii\base\Widget::end()
+#16 /home/nct36me6dkto/public_html/frontend/views/layouts/main.php(16): yii\base\View->endContent()
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('\n\n<div class="c...')
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#22 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#23 [internal function]: yii\web\ErrorAction->run()
+#24 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#25 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#26 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#27 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#28 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#29 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#30 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+The SQL being executed was: SELECT * FROM `currency` WHERE (NOT (`middle`='')) AND (NOT (`buy_1`='')) AND (NOT (`sell_1`='')) in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Schema.php:664
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT * FROM `...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /home/nct36me6dkto/public_html/frontend/components/Controller.php(28): yii\db\ActiveQuery->all()
+#6 [internal function]: frontend\components\Controller->frontend\components\{closure}(Object(yii\base\Event))
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Event.php(312): call_user_func(Object(Closure), Object(yii\base\Event))
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Component.php(636): yii\base\Event::trigger('yii\\web\\View', 'beginPage', Object(yii\base\Event))
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(575): yii\base\Component->trigger('beginPage')
+#10 /home/nct36me6dkto/public_html/frontend/views/layouts/base.php(16): yii\base\View->beginPage()
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/widgets/ContentDecorator.php(79): yii\base\View->renderFile('/home/nct36me6d...', Array)
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Widget.php(109): yii\widgets\ContentDecorator->run()
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(521): yii\base\Widget::end()
+#16 /home/nct36me6dkto/public_html/frontend/views/layouts/main.php(16): yii\base\View->endContent()
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('\n\n<div class="c...')
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#22 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#23 [internal function]: yii\web\ErrorAction->run()
+#24 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#25 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#26 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#27 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#28 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#29 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#30 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+Previous exception:
+PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php:1290
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1290): PDOStatement->execute()
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT * FROM `...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /home/nct36me6dkto/public_html/frontend/components/Controller.php(28): yii\db\ActiveQuery->all()
+#6 [internal function]: frontend\components\Controller->frontend\components\{closure}(Object(yii\base\Event))
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Event.php(312): call_user_func(Object(Closure), Object(yii\base\Event))
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Component.php(636): yii\base\Event::trigger('yii\\web\\View', 'beginPage', Object(yii\base\Event))
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(575): yii\base\Component->trigger('beginPage')
+#10 /home/nct36me6dkto/public_html/frontend/views/layouts/base.php(16): yii\base\View->beginPage()
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('<div class="sit...')
+#15 /home/nct36me6dkto/public_html/frontend/controllers/SiteController.php(79): yii\base\Controller->render('index', Array)
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /home/nct36me6dkto/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+The SQL being executed was: SELECT * FROM `currency` WHERE (NOT (`middle`='')) AND (NOT (`buy_1`='')) AND (NOT (`sell_1`='')) in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Schema.php:664
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT * FROM `...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /home/nct36me6dkto/public_html/frontend/components/Controller.php(28): yii\db\ActiveQuery->all()
+#6 [internal function]: frontend\components\Controller->frontend\components\{closure}(Object(yii\base\Event))
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Event.php(312): call_user_func(Object(Closure), Object(yii\base\Event))
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Component.php(636): yii\base\Event::trigger('yii\\web\\View', 'beginPage', Object(yii\base\Event))
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(575): yii\base\Component->trigger('beginPage')
+#10 /home/nct36me6dkto/public_html/frontend/views/layouts/base.php(16): yii\base\View->beginPage()
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('<div class="sit...')
+#15 /home/nct36me6dkto/public_html/frontend/controllers/SiteController.php(79): yii\base\Controller->render('index', Array)
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /home/nct36me6dkto/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#23 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+$_SERVER = [
+    'LSPHP_ENABLE_USER_INI' => 'on',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'PWD' => '/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'HTTP_CONNECTION' => 'close',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => 'advanced-frontend=c89ecebfd4f747cf4ff75949f4f7c79d; _language=ff100a5bf510cc7f5c00b6a5f8c86190a6d2cd67360820491851c2c4aaa451d8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf-frontend=23898f8c3b376384345bd9d24bb296e5e007001ded10e9cf5fbe2b9a8d4d74c4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22gAe_aR_q1yboBgklGO5P_su0SW5ykEBM%22%3B%7D',
+    'HTTP_HOST' => 'creativeowl.biz',
+    'HTTP_REFERER' => 'http://creativeowl.biz/en',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+    'REDIRECT_REDIRECT_UNIQUE_ID' => 'Xo3G9p987DNgEQKjI6xyqAAAAIE',
+    'REDIRECT_REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'Xo3G9p987DNgEQKjI6xyqAAAAIE',
+    'REDIRECT_STATUS' => '200',
+    'UNIQUE_ID' => 'Xo3G9p987DNgEQKjI6xyqAAAAIE',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'creativeowl.biz',
+    'SERVER_ADDR' => '160.153.133.171',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '178.214.254.122',
+    'DOCUMENT_ROOT' => '/home/nct36me6dkto/public_html',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/nct36me6dkto/public_html',
+    'SERVER_ADMIN' => 'webmaster@creativeowl.biz',
+    'SCRIPT_FILENAME' => '/home/nct36me6dkto/public_html/frontend/web/index.php',
+    'REMOTE_PORT' => '53533',
+    'REDIRECT_URL' => '/frontend/web/en',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/en',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1586349814.609097003936767578125,
+    'REQUEST_TIME' => 1586349814,
+]
+[16-Apr-2020 17:18:13 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[16-Apr-2020 17:18:13 UTC] PHP Warning:  Header may not contain more than a single header, new line detected in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Response.php on line 374
+[04-May-2020 12:46:50 UTC] PHP Notice:  Undefined property: yii\base\ErrorException::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[04-May-2020 12:46:50 UTC] PHP Warning:  Header may not contain more than a single header, new line detected in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Response.php on line 374
+[20-May-2020 10:40:11 UTC] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php:1290
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1290): PDOStatement->execute()
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT * FROM `...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /home/nct36me6dkto/public_html/frontend/components/Controller.php(28): yii\db\ActiveQuery->all()
+#6 [internal function]: frontend\components\Controller->frontend\components\{closure}(Object(yii\base\Event))
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Event.php(312): call_user_func(Object(Closure), Object(yii\base\Event))
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Component.php(636): yii\base\Event::trigger('yii\\web\\View', 'beginPage', Object(yii\base\Event))
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(575): yii\base\Component->trigger('beginPage')
+#10 /home/nct36me6dkto/public_html/frontend/views/layouts/base.php(16): yii\base\View->beginPage()
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/widgets/ContentDecorator.php(79): yii\base\View->renderFile('/home/nct36me6d...', Array)
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Widget.php(109): yii\widgets\ContentDecorator->run()
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(521): yii\base\Widget::end()
+#16 /home/nct36me6dkto/public_html/frontend/views/layouts/main.php(16): yii\base\View->endContent()
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('\n\n<div class="c...')
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#22 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#23 [internal function]: yii\web\ErrorAction->run()
+#24 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#25 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#26 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#27 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#28 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#29 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#30 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+The SQL being executed was: SELECT * FROM `currency` WHERE (NOT (`middle`='')) AND (NOT (`buy_1`='')) AND (NOT (`sell_1`='')) in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Schema.php:664
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT * FROM `...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /home/nct36me6dkto/public_html/frontend/components/Controller.php(28): yii\db\ActiveQuery->all()
+#6 [internal function]: frontend\components\Controller->frontend\components\{closure}(Object(yii\base\Event))
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Event.php(312): call_user_func(Object(Closure), Object(yii\base\Event))
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Component.php(636): yii\base\Event::trigger('yii\\web\\View', 'beginPage', Object(yii\base\Event))
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(575): yii\base\Component->trigger('beginPage')
+#10 /home/nct36me6dkto/public_html/frontend/views/layouts/base.php(16): yii\base\View->beginPage()
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/widgets/ContentDecorator.php(79): yii\base\View->renderFile('/home/nct36me6d...', Array)
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Widget.php(109): yii\widgets\ContentDecorator->run()
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(521): yii\base\Widget::end()
+#16 /home/nct36me6dkto/public_html/frontend/views/layouts/main.php(16): yii\base\View->endContent()
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('\n\n<div class="c...')
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#22 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#23 [internal function]: yii\web\ErrorAction->run()
+#24 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#25 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#26 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#27 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#28 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#29 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#30 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "-us/index". in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('-us/index', Array)
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/nct36me6dkto/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/nct36me6dkto/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'LSPHP_ENABLE_USER_INI' => 'on',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'PWD' => '/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'HTTP_CONNECTION' => 'close',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => 'advanced-frontend=c9a0dabfab74d3f245a72732028a0d94',
+    'HTTP_HOST' => 'creativeowl.biz',
+    'HTTP_REFERER' => 'http://creativeowl.biz/en-us',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+    'REDIRECT_REDIRECT_UNIQUE_ID' => 'XsUIzGLLiYzG3tDTxUYc@wAAAIc',
+    'REDIRECT_REDIRECT_SCRIPT_URL' => '/en-us',
+    'REDIRECT_REDIRECT_SCRIPT_URI' => 'http://creativeowl.biz/en-us',
+    'REDIRECT_REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'XsUIzGLLiYzG3tDTxUYc@wAAAIc',
+    'REDIRECT_SCRIPT_URL' => '/en-us',
+    'REDIRECT_SCRIPT_URI' => 'http://creativeowl.biz/en-us',
+    'REDIRECT_STATUS' => '200',
+    'UNIQUE_ID' => 'XsUIzGLLiYzG3tDTxUYc@wAAAIc',
+    'SCRIPT_URL' => '/en-us',
+    'SCRIPT_URI' => 'http://creativeowl.biz/en-us',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'creativeowl.biz',
+    'SERVER_ADDR' => '160.153.133.171',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '46.246.65.157',
+    'DOCUMENT_ROOT' => '/home/nct36me6dkto/public_html',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/nct36me6dkto/public_html',
+    'SERVER_ADMIN' => 'webmaster@creativeowl.biz',
+    'SCRIPT_FILENAME' => '/home/nct36me6dkto/public_html/frontend/web/index.php',
+    'REMOTE_PORT' => '64013',
+    'REDIRECT_URL' => '/frontend/web/en-us',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/en-us',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1589971148.5721080303192138671875,
+    'REQUEST_TIME' => 1589971148,
+]
+[26-May-2020 05:00:51 UTC] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php:1290
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1290): PDOStatement->execute()
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT * FROM `...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /home/nct36me6dkto/public_html/common/models/Page.php(171): yii\db\ActiveQuery->all()
+#6 /home/nct36me6dkto/public_html/frontend/components/Controller.php(46): common\models\Page->getPagesList('header')
+#7 [internal function]: frontend\components\Controller->frontend\components\{closure}(Object(yii\base\Event))
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Event.php(312): call_user_func(Object(Closure), Object(yii\base\Event))
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Component.php(636): yii\base\Event::trigger('yii\\web\\View', 'beginPage', Object(yii\base\Event))
+#10 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(575): yii\base\Component->trigger('beginPage')
+#11 /home/nct36me6dkto/public_html/frontend/views/layouts/base.php(16): yii\base\View->beginPage()
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/widgets/ContentDecorator.php(79): yii\base\View->renderFile('/home/nct36me6d...', Array)
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Widget.php(109): yii\widgets\ContentDecorator->run()
+#16 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(521): yii\base\Widget::end()
+#17 /home/nct36me6dkto/public_html/frontend/views/layouts/main.php(16): yii\base\View->endContent()
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('\n\n<div class="c...')
+#22 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#23 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#24 [internal function]: yii\web\ErrorAction->run()
+#25 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#26 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#27 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#28 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#29 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#30 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+The SQL being executed was: SELECT * FROM `page` WHERE (`type`='tree') AND (`category`='header') ORDER BY `weight` DESC in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Schema.php:664
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT * FROM `...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /home/nct36me6dkto/public_html/common/models/Page.php(171): yii\db\ActiveQuery->all()
+#6 /home/nct36me6dkto/public_html/frontend/components/Controller.php(46): common\models\Page->getPagesList('header')
+#7 [internal function]: frontend\components\Controller->frontend\components\{closure}(Object(yii\base\Event))
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Event.php(312): call_user_func(Object(Closure), Object(yii\base\Event))
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Component.php(636): yii\base\Event::trigger('yii\\web\\View', 'beginPage', Object(yii\base\Event))
+#10 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(575): yii\base\Component->trigger('beginPage')
+#11 /home/nct36me6dkto/public_html/frontend/views/layouts/base.php(16): yii\base\View->beginPage()
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/widgets/ContentDecorator.php(79): yii\base\View->renderFile('/home/nct36me6d...', Array)
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Widget.php(109): yii\widgets\ContentDecorator->run()
+#16 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(521): yii\base\Widget::end()
+#17 /home/nct36me6dkto/public_html/frontend/views/layouts/main.php(16): yii\base\View->endContent()
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('\n\n<div class="c...')
+#22 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#23 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#24 [internal function]: yii\web\ErrorAction->run()
+#25 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#26 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#27 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#28 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#29 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#30 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#31 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "-us/index". in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('-us/index', Array)
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/nct36me6dkto/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/nct36me6dkto/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'LSPHP_ENABLE_USER_INI' => 'on',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'PWD' => '/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'HTTP_CONNECTION' => 'close',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => 'advanced-frontend=ff6a9958384beeee7a11654dbe2946c3',
+    'HTTP_HOST' => 'creativeowl.biz',
+    'HTTP_REFERER' => 'http://creativeowl.biz/en-us',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36 Kinza/4.7.2',
+    'REDIRECT_REDIRECT_UNIQUE_ID' => 'XsyiHXKeUd39i7Sgn7@xRAAAABY',
+    'REDIRECT_REDIRECT_SCRIPT_URL' => '/en-us',
+    'REDIRECT_REDIRECT_SCRIPT_URI' => 'http://creativeowl.biz/en-us',
+    'REDIRECT_REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'XsyiHXKeUd39i7Sgn7@xRAAAABY',
+    'REDIRECT_SCRIPT_URL' => '/en-us',
+    'REDIRECT_SCRIPT_URI' => 'http://creativeowl.biz/en-us',
+    'REDIRECT_STATUS' => '200',
+    'UNIQUE_ID' => 'XsyiHXKeUd39i7Sgn7@xRAAAABY',
+    'SCRIPT_URL' => '/en-us',
+    'SCRIPT_URI' => 'http://creativeowl.biz/en-us',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'creativeowl.biz',
+    'SERVER_ADDR' => '160.153.133.171',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '178.214.245.128',
+    'DOCUMENT_ROOT' => '/home/nct36me6dkto/public_html',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/nct36me6dkto/public_html',
+    'SERVER_ADMIN' => 'webmaster@creativeowl.biz',
+    'SCRIPT_FILENAME' => '/home/nct36me6dkto/public_html/frontend/web/index.php',
+    'REMOTE_PORT' => '57687',
+    'REDIRECT_URL' => '/frontend/web/en-us',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/en-us',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1590469149.59441089630126953125,
+    'REQUEST_TIME' => 1590469149,
+]
+[26-May-2020 05:12:37 UTC] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php:1290
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1290): PDOStatement->execute()
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT * FROM `...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /home/nct36me6dkto/public_html/frontend/components/Controller.php(28): yii\db\ActiveQuery->all()
+#6 [internal function]: frontend\components\Controller->frontend\components\{closure}(Object(yii\base\Event))
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Event.php(312): call_user_func(Object(Closure), Object(yii\base\Event))
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Component.php(636): yii\base\Event::trigger('yii\\web\\View', 'beginPage', Object(yii\base\Event))
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(575): yii\base\Component->trigger('beginPage')
+#10 /home/nct36me6dkto/public_html/frontend/views/layouts/base.php(16): yii\base\View->beginPage()
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/widgets/ContentDecorator.php(79): yii\base\View->renderFile('/home/nct36me6d...', Array)
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Widget.php(109): yii\widgets\ContentDecorator->run()
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(521): yii\base\Widget::end()
+#16 /home/nct36me6dkto/public_html/frontend/views/layouts/main.php(16): yii\base\View->endContent()
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('\n\n<div class="c...')
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#22 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#23 [internal function]: yii\web\ErrorAction->run()
+#24 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#25 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#26 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#27 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#28 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#29 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#30 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+The SQL being executed was: SELECT * FROM `currency` WHERE (NOT (`middle`='')) AND (NOT (`buy_1`='')) AND (NOT (`sell_1`='')) in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Schema.php:664
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT * FROM `...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /home/nct36me6dkto/public_html/frontend/components/Controller.php(28): yii\db\ActiveQuery->all()
+#6 [internal function]: frontend\components\Controller->frontend\components\{closure}(Object(yii\base\Event))
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Event.php(312): call_user_func(Object(Closure), Object(yii\base\Event))
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Component.php(636): yii\base\Event::trigger('yii\\web\\View', 'beginPage', Object(yii\base\Event))
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(575): yii\base\Component->trigger('beginPage')
+#10 /home/nct36me6dkto/public_html/frontend/views/layouts/base.php(16): yii\base\View->beginPage()
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/widgets/ContentDecorator.php(79): yii\base\View->renderFile('/home/nct36me6d...', Array)
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Widget.php(109): yii\widgets\ContentDecorator->run()
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(521): yii\base\Widget::end()
+#16 /home/nct36me6dkto/public_html/frontend/views/layouts/main.php(16): yii\base\View->endContent()
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('\n\n<div class="c...')
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#22 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#23 [internal function]: yii\web\ErrorAction->run()
+#24 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#25 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#26 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#27 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#28 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#29 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#30 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "-us/index". in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('-us/index', Array)
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/nct36me6dkto/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/nct36me6dkto/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'LSPHP_ENABLE_USER_INI' => 'on',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'PWD' => '/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'HTTP_CONNECTION' => 'close',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => 'advanced-frontend=903d1e45339ac74c7db17d6fcd703a2e',
+    'HTTP_HOST' => 'creativeowl.biz',
+    'HTTP_REFERER' => 'http://creativeowl.biz/en-us',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44',
+    'REDIRECT_REDIRECT_UNIQUE_ID' => 'XsylBRx0FxHUXvx0H4vEUAAAAcU',
+    'REDIRECT_REDIRECT_SCRIPT_URL' => '/en-us',
+    'REDIRECT_REDIRECT_SCRIPT_URI' => 'http://creativeowl.biz/en-us',
+    'REDIRECT_REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'XsylBRx0FxHUXvx0H4vEUAAAAcU',
+    'REDIRECT_SCRIPT_URL' => '/en-us',
+    'REDIRECT_SCRIPT_URI' => 'http://creativeowl.biz/en-us',
+    'REDIRECT_STATUS' => '200',
+    'UNIQUE_ID' => 'XsylBRx0FxHUXvx0H4vEUAAAAcU',
+    'SCRIPT_URL' => '/en-us',
+    'SCRIPT_URI' => 'http://creativeowl.biz/en-us',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'creativeowl.biz',
+    'SERVER_ADDR' => '160.153.133.171',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '92.38.136.69',
+    'DOCUMENT_ROOT' => '/home/nct36me6dkto/public_html',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/nct36me6dkto/public_html',
+    'SERVER_ADMIN' => 'webmaster@creativeowl.biz',
+    'SCRIPT_FILENAME' => '/home/nct36me6dkto/public_html/frontend/web/index.php',
+    'REMOTE_PORT' => '62578',
+    'REDIRECT_URL' => '/frontend/web/en-us',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/en-us',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1590469893.936695098876953125,
+    'REQUEST_TIME' => 1590469893,
+]
+[26-May-2020 05:12:37 UTC] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php:1290
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1290): PDOStatement->execute()
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT * FROM `...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /home/nct36me6dkto/public_html/frontend/components/Controller.php(28): yii\db\ActiveQuery->all()
+#6 [internal function]: frontend\components\Controller->frontend\components\{closure}(Object(yii\base\Event))
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Event.php(312): call_user_func(Object(Closure), Object(yii\base\Event))
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Component.php(636): yii\base\Event::trigger('yii\\web\\View', 'beginPage', Object(yii\base\Event))
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(575): yii\base\Component->trigger('beginPage')
+#10 /home/nct36me6dkto/public_html/frontend/views/layouts/base.php(16): yii\base\View->beginPage()
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/widgets/ContentDecorator.php(79): yii\base\View->renderFile('/home/nct36me6d...', Array)
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Widget.php(109): yii\widgets\ContentDecorator->run()
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(521): yii\base\Widget::end()
+#16 /home/nct36me6dkto/public_html/frontend/views/layouts/main.php(16): yii\base\View->endContent()
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('\n\n<div class="c...')
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#22 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#23 [internal function]: yii\web\ErrorAction->run()
+#24 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#25 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#26 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#27 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#28 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#29 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#30 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+The SQL being executed was: SELECT * FROM `currency` WHERE (NOT (`middle`='')) AND (NOT (`buy_1`='')) AND (NOT (`sell_1`='')) in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Schema.php:664
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT * FROM `...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /home/nct36me6dkto/public_html/frontend/components/Controller.php(28): yii\db\ActiveQuery->all()
+#6 [internal function]: frontend\components\Controller->frontend\components\{closure}(Object(yii\base\Event))
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Event.php(312): call_user_func(Object(Closure), Object(yii\base\Event))
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Component.php(636): yii\base\Event::trigger('yii\\web\\View', 'beginPage', Object(yii\base\Event))
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(575): yii\base\Component->trigger('beginPage')
+#10 /home/nct36me6dkto/public_html/frontend/views/layouts/base.php(16): yii\base\View->beginPage()
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/widgets/ContentDecorator.php(79): yii\base\View->renderFile('/home/nct36me6d...', Array)
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Widget.php(109): yii\widgets\ContentDecorator->run()
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(521): yii\base\Widget::end()
+#16 /home/nct36me6dkto/public_html/frontend/views/layouts/main.php(16): yii\base\View->endContent()
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('\n\n<div class="c...')
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#22 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#23 [internal function]: yii\web\ErrorAction->run()
+#24 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#25 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#26 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#27 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#28 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#29 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#30 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "-us/index". in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('-us/index', Array)
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/nct36me6dkto/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/nct36me6dkto/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'LSPHP_ENABLE_USER_INI' => 'on',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'PWD' => '/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'HTTP_CONNECTION' => 'close',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => 'advanced-frontend=a3896ece883e1b5b147bacc869fff5c7',
+    'HTTP_HOST' => 'creativeowl.biz',
+    'HTTP_REFERER' => 'http://creativeowl.biz/en-us',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36 OPR/53.0.2907.106',
+    'REDIRECT_REDIRECT_UNIQUE_ID' => 'XsylBSSl0Jz@8ZaMm9SKNAAAAoI',
+    'REDIRECT_REDIRECT_SCRIPT_URL' => '/en-us',
+    'REDIRECT_REDIRECT_SCRIPT_URI' => 'http://creativeowl.biz/en-us',
+    'REDIRECT_REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'XsylBSSl0Jz@8ZaMm9SKNAAAAoI',
+    'REDIRECT_SCRIPT_URL' => '/en-us',
+    'REDIRECT_SCRIPT_URI' => 'http://creativeowl.biz/en-us',
+    'REDIRECT_STATUS' => '200',
+    'UNIQUE_ID' => 'XsylBSSl0Jz@8ZaMm9SKNAAAAoI',
+    'SCRIPT_URL' => '/en-us',
+    'SCRIPT_URI' => 'http://creativeowl.biz/en-us',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'creativeowl.biz',
+    'SERVER_ADDR' => '160.153.133.171',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '92.38.136.69',
+    'DOCUMENT_ROOT' => '/home/nct36me6dkto/public_html',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/nct36me6dkto/public_html',
+    'SERVER_ADMIN' => 'webmaster@creativeowl.biz',
+    'SCRIPT_FILENAME' => '/home/nct36me6dkto/public_html/frontend/web/index.php',
+    'REMOTE_PORT' => '62576',
+    'REDIRECT_URL' => '/frontend/web/en-us',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/en-us',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1590469893.932034015655517578125,
+    'REQUEST_TIME' => 1590469893,
+]
+[26-May-2020 05:12:37 UTC] PHP Notice:  Undefined property: yii\db\Exception::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[26-May-2020 05:12:37 UTC] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php:1290
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1290): PDOStatement->execute()
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT `t1`.`me...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/DbMessageSource.php(161): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/DbMessageSource.php(132): yii\i18n\DbMessageSource->loadMessagesFromDb('app', 'en')
+#5 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/MessageSource.php(107): yii\i18n\DbMessageSource->loadMessages('app', 'en')
+#6 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/MessageSource.php(87): yii\i18n\MessageSource->translateMessage('app', 'Oops!', 'en')
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/I18N.php(90): yii\i18n\MessageSource->translate('app', 'Oops!', 'en')
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/BaseYii.php(526): yii\i18n\I18N->translate('app', 'Oops!', Array, 'en')
+#9 /home/nct36me6dkto/public_html/frontend/views/site/error.php(25): yii\BaseYii::t('app', 'Oops!')
+#10 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('error', Array, Object(frontend\controllers\SiteController))
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#16 [internal function]: yii\web\ErrorAction->run()
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#22 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+The SQL being executed was: SELECT `t1`.`message` AS `message`, `t2`.`translation` AS `translation` FROM `language_source` `t1`, `language_translate` `t2` WHERE (`t1`.`id`=`t2`.`id`) AND (`t1`.`category`='app') AND (`t2`.`language`='en') in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Schema.php:664
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'SELECT `t1`.`me...')
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT `t1`.`me...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/DbMessageSource.php(161): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/DbMessageSource.php(132): yii\i18n\DbMessageSource->loadMessagesFromDb('app', 'en')
+#5 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/MessageSource.php(107): yii\i18n\DbMessageSource->loadMessages('app', 'en')
+#6 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/MessageSource.php(87): yii\i18n\MessageSource->translateMessage('app', 'Oops!', 'en')
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/I18N.php(90): yii\i18n\MessageSource->translate('app', 'Oops!', 'en')
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/BaseYii.php(526): yii\i18n\I18N->translate('app', 'Oops!', Array, 'en')
+#9 /home/nct36me6dkto/public_html/frontend/views/site/error.php(25): yii\BaseYii::t('app', 'Oops!')
+#10 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('error', Array, Object(frontend\controllers\SiteController))
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#16 [internal function]: yii\web\ErrorAction->run()
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#22 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#23 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+Previous exception:
+PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php:1290
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1290): PDOStatement->execute()
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT * FROM `...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /home/nct36me6dkto/public_html/frontend/components/Controller.php(28): yii\db\ActiveQuery->all()
+#6 [internal function]: frontend\components\Controller->frontend\components\{closure}(Object(yii\base\Event))
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Event.php(312): call_user_func(Object(Closure), Object(yii\base\Event))
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Component.php(636): yii\base\Event::trigger('yii\\web\\View', 'beginPage', Object(yii\base\Event))
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(575): yii\base\Component->trigger('beginPage')
+#10 /home/nct36me6dkto/public_html/frontend/views/layouts/base.php(16): yii\base\View->beginPage()
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/widgets/ContentDecorator.php(79): yii\base\View->renderFile('/home/nct36me6d...', Array)
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Widget.php(109): yii\widgets\ContentDecorator->run()
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(521): yii\base\Widget::end()
+#16 /home/nct36me6dkto/public_html/frontend/views/layouts/main.php(16): yii\base\View->endContent()
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\PageController))
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('')
+#21 /home/nct36me6dkto/public_html/frontend/controllers/PageController.php(25): yii\base\Controller->render('contacts', Array)
+#22 [internal function]: frontend\controllers\PageController->actionContacts()
+#23 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#24 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#25 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('contacts', Array)
+#26 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('page/contacts', Array)
+#27 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 /home/nct36me6dkto/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#29 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+The SQL being executed was: SELECT * FROM `currency` WHERE (NOT (`middle`='')) AND (NOT (`buy_1`='')) AND (NOT (`sell_1`='')) in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Schema.php:664
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT * FROM `...')
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /home/nct36me6dkto/public_html/frontend/components/Controller.php(28): yii\db\ActiveQuery->all()
+#6 [internal function]: frontend\components\Controller->frontend\components\{closure}(Object(yii\base\Event))
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Event.php(312): call_user_func(Object(Closure), Object(yii\base\Event))
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Component.php(636): yii\base\Event::trigger('yii\\web\\View', 'beginPage', Object(yii\base\Event))
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(575): yii\base\Component->trigger('beginPage')
+#10 /home/nct36me6dkto/public_html/frontend/views/layouts/base.php(16): yii\base\View->beginPage()
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/widgets/ContentDecorator.php(79): yii\base\View->renderFile('/home/nct36me6d...', Array)
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Widget.php(109): yii\widgets\ContentDecorator->run()
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(521): yii\base\Widget::end()
+#16 /home/nct36me6dkto/public_html/frontend/views/layouts/main.php(16): yii\base\View->endContent()
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\PageController))
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('')
+#21 /home/nct36me6dkto/public_html/frontend/controllers/PageController.php(25): yii\base\Controller->render('contacts', Array)
+#22 [internal function]: frontend\controllers\PageController->actionContacts()
+#23 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#24 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#25 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('contacts', Array)
+#26 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('page/contacts', Array)
+#27 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 /home/nct36me6dkto/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2006
+    [2] => MySQL server has gone away
+)
+
+$_SERVER = [
+    'LSPHP_ENABLE_USER_INI' => 'on',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'PWD' => '/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'HTTP_CONNECTION' => 'close',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => 'advanced-frontend=9d4b7d5013a5e955cc3e1894598d803f; _language=ff100a5bf510cc7f5c00b6a5f8c86190a6d2cd67360820491851c2c4aaa451d8a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf-frontend=6864bf92826c471c30d4d79b5c8ce71be835c36dc1d5af8cd5af780d906e4350a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22TOaIC5rj_UUh_xj9jsiT2RELQppMkzBz%22%3B%7D',
+    'HTTP_HOST' => 'creativeowl.biz',
+    'HTTP_REFERER' => 'http://creativeowl.biz/en/contacts',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+    'REDIRECT_REDIRECT_UNIQUE_ID' => 'XsylBrrDe@-dYJ9QH@eC4gAAAhc',
+    'REDIRECT_REDIRECT_SCRIPT_URL' => '/en/contacts',
+    'REDIRECT_REDIRECT_SCRIPT_URI' => 'http://creativeowl.biz/en/contacts',
+    'REDIRECT_REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'XsylBrrDe@-dYJ9QH@eC4gAAAhc',
+    'REDIRECT_SCRIPT_URL' => '/en/contacts',
+    'REDIRECT_SCRIPT_URI' => 'http://creativeowl.biz/en/contacts',
+    'REDIRECT_STATUS' => '200',
+    'UNIQUE_ID' => 'XsylBrrDe@-dYJ9QH@eC4gAAAhc',
+    'SCRIPT_URL' => '/en/contacts',
+    'SCRIPT_URI' => 'http://creativeowl.biz/en/contacts',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'creativeowl.biz',
+    'SERVER_ADDR' => '160.153.133.171',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '145.255.1.41',
+    'DOCUMENT_ROOT' => '/home/nct36me6dkto/public_html',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/nct36me6dkto/public_html',
+    'SERVER_ADMIN' => 'webmaster@creativeowl.biz',
+    'SCRIPT_FILENAME' => '/home/nct36me6dkto/public_html/frontend/web/index.php',
+    'REMOTE_PORT' => '55866',
+    'REDIRECT_URL' => '/frontend/web/en/contacts',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/en/contacts',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1590469894.6474020481109619140625,
+    'REQUEST_TIME' => 1590469894,
+]
+[28-Jun-2020 18:52:08 UTC] PHP Notice:  Undefined property: yii\db\Exception::$statusCode in /home/nct36me6dkto/public_html/frontend/views/site/error.php on line 24
+[28-Jun-2020 18:52:08 UTC] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'user_primary', 'v?MmXdJ?IoWP', NULL)
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(380): yii\db\Connection->getSlavePdo()
+#5 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(399): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(57): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#10 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Schema->getQueryBuilder()
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Query.php(146): yii\db\Connection->getQueryBuilder()
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/DbMessageSource.php(161): yii\db\Query->createCommand(Object(yii\db\Connection))
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/DbMessageSource.php(132): yii\i18n\DbMessageSource->loadMessagesFromDb('app', 'en-US')
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/MessageSource.php(107): yii\i18n\DbMessageSource->loadMessages('app', 'en-US')
+#16 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/MessageSource.php(87): yii\i18n\MessageSource->translateMessage('app', 'Oops!', 'en-US')
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/I18N.php(90): yii\i18n\MessageSource->translate('app', 'Oops!', 'en-US')
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/BaseYii.php(526): yii\i18n\I18N->translate('app', 'Oops!', Array, 'en-US')
+#19 /home/nct36me6dkto/public_html/frontend/views/site/error.php(25): yii\BaseYii::t('app', 'Oops!')
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#22 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#23 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('error', Array, Object(frontend\controllers\SiteController))
+#24 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#25 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#26 [internal function]: yii\web\ErrorAction->run()
+#27 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#28 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#29 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#30 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#31 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#32 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#33 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(380): yii\db\Connection->getSlavePdo()
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(399): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(57): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Schema->getQueryBuilder()
+#10 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Query.php(146): yii\db\Connection->getQueryBuilder()
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/DbMessageSource.php(161): yii\db\Query->createCommand(Object(yii\db\Connection))
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/DbMessageSource.php(132): yii\i18n\DbMessageSource->loadMessagesFromDb('app', 'en-US')
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/MessageSource.php(107): yii\i18n\DbMessageSource->loadMessages('app', 'en-US')
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/MessageSource.php(87): yii\i18n\MessageSource->translateMessage('app', 'Oops!', 'en-US')
+#15 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/i18n/I18N.php(90): yii\i18n\MessageSource->translate('app', 'Oops!', 'en-US')
+#16 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/BaseYii.php(526): yii\i18n\I18N->translate('app', 'Oops!', Array, 'en-US')
+#17 /home/nct36me6dkto/public_html/frontend/views/site/error.php(25): yii\BaseYii::t('app', 'Oops!')
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/nct36me6d...')
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/nct36me6d...', Array)
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/nct36me6d...', Array, Object(frontend\controllers\SiteController))
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('error', Array, Object(frontend\controllers\SiteController))
+#22 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#23 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#24 [internal function]: yii\web\ErrorAction->run()
+#25 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#26 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#27 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#28 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#29 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#30 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#31 {main}
+Additional Information:
+
+Previous exception:
+PDOException: SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'user_primary', 'v?MmXdJ?IoWP', NULL)
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(380): yii\db\Connection->getSlavePdo()
+#5 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(399): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(57): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#10 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Schema->getQueryBuilder()
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Query.php(237): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#15 /home/nct36me6dkto/public_html/common/components/Storage.php(23): yii\db\ActiveQuery->all()
+#16 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): common\components\Storage->init()
+#17 [internal function]: yii\base\BaseObject->__construct(Array)
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/di/Container.php(376): ReflectionClass->newInstanceArgs(Array)
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('common\\componen...', Array, Array)
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('common\\componen...', Array, Array)
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#22 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('storage', true)
+#23 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(313): yii\base\Module->get('storage')
+#24 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#25 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(273): yii\web\Application->bootstrap()
+#26 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#27 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#28 /home/nct36me6dkto/public_html/frontend/web/index.php(17): yii\base\Application->__construct(Array)
+#29 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(380): yii\db\Connection->getSlavePdo()
+#3 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(399): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(57): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#9 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Schema->getQueryBuilder()
+#10 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#11 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/Query.php(237): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#12 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#13 /home/nct36me6dkto/public_html/common/components/Storage.php(23): yii\db\ActiveQuery->all()
+#14 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): common\components\Storage->init()
+#15 [internal function]: yii\base\BaseObject->__construct(Array)
+#16 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/di/Container.php(376): ReflectionClass->newInstanceArgs(Array)
+#17 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('common\\componen...', Array, Array)
+#18 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('common\\componen...', Array, Array)
+#19 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#20 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('storage', true)
+#21 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(313): yii\base\Module->get('storage')
+#22 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#23 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(273): yii\web\Application->bootstrap()
+#24 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#25 /home/nct36me6dkto/public_html/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#26 /home/nct36me6dkto/public_html/frontend/web/index.php(17): yii\base\Application->__construct(Array)
+#27 {main}
+Additional Information:
+
+$_SERVER = [
+    'LSPHP_ENABLE_USER_INI' => 'on',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'PWD' => '/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'HTTP_CONNECTION' => 'close',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_HOST' => 'creativeowl.biz',
+    'HTTP_REFERER' => 'http://creativeowl.biz/',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+    'REDIRECT_UNIQUE_ID' => 'Xvjmy77LQlYINzBcc0rbpAAAH4s',
+    'REDIRECT_SCRIPT_URL' => '/',
+    'REDIRECT_SCRIPT_URI' => 'http://creativeowl.biz/',
+    'REDIRECT_STATUS' => '200',
+    'UNIQUE_ID' => 'Xvjmy77LQlYINzBcc0rbpAAAH4s',
+    'SCRIPT_URL' => '/',
+    'SCRIPT_URI' => 'http://creativeowl.biz/',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'creativeowl.biz',
+    'SERVER_ADDR' => '160.153.133.171',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '188.165.241.177',
+    'DOCUMENT_ROOT' => '/home/nct36me6dkto/public_html',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/nct36me6dkto/public_html',
+    'SERVER_ADMIN' => 'webmaster@creativeowl.biz',
+    'SCRIPT_FILENAME' => '/home/nct36me6dkto/public_html/frontend/web/index.php',
+    'REMOTE_PORT' => '65441',
+    'REDIRECT_URL' => '/',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1593370323.343370914459228515625,
+    'REQUEST_TIME' => 1593370323,
+]

@@ -1,0 +1,1 @@
+<currency-assets></currency-assets>
